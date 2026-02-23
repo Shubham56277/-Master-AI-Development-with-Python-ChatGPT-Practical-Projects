@@ -1,41 +1,62 @@
-# -Master-AI-Development-with-Python-ChatGPT-Practical-Projects
-<details> <summary><b>1. Installation (Click to Expand)</b></summary>
+<details>
+<summary><b>▶ Subtitle Gen (Click to Expand)</b></summary>
+
+---
+
+### 1️⃣ Installation
 
 Install required package:
 
+```bash
 pip install requests
-</details>
-<details> <summary><b>2. API Key Setup (Click to Expand)</b></summary>
+```
 
-Create an account at:
-https://www.assemblyai.com
+---
 
-Generate your API key and paste it inside the script:
+### 2️⃣ API Key Setup
 
+Create account at:  
+https://www.assemblyai.com  
+
+Generate your API key and paste inside script:
+
+```python
 API_KEY = "YOUR_ASSEMBLYAI_API_KEY"
+```
 
 ⚠ Do NOT upload your API key to GitHub.
 
-</details>
-<details> <summary><b>3. How It Works (Click to Expand)</b></summary>
+---
 
-Step 1 → Upload local file to AssemblyAI
+### 3️⃣ How It Works
+
+```text
+Step 1 → Upload local file
 Step 2 → Request transcription
-Step 3 → Poll until status becomes "completed"
+Step 3 → Poll until status = completed
 Step 4 → Download subtitles as .srt
+```
 
-</details>
-<details> <summary><b>4. How To Run (Click to Expand)</b></summary>
+---
 
-Make sure your file path is correct:
+### 4️⃣ How To Run
 
-AUDIO_PATH = r"E:\path\to\your\video.mp4"
+Set your file path:
 
-Run the script:
+```python
+AUDIO_PATH = r"E:\path\to\video.mp4"
+```
 
+Run:
+
+```bash
 python subtitles.py
+```
 
-After completion, you will get:
+Output:
 
+```text
 subtitles.srt
+```
+
 </details>

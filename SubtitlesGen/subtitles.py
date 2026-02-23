@@ -2,7 +2,7 @@ import os
 import time
 import requests
 
-API_KEY = "f89d4376db964223a390d1e2921b6a77" #paste your api key here
+API_KEY = "" #paste your api key here
 AUDIO_PATH = r"E:\768\videoplayback (1).mp4" #copy and paste file path
 BASE_URL = "https://api.assemblyai.com"
 
