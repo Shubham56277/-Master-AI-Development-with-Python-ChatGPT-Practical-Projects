@@ -1,20 +1,8 @@
-# Master AI Development with Python – Practical Projects
+# Master AI Development with Python – Practical Projects  
 
 A collection of practical Python projects built for learning, experimentation, and real-world skill development.
 
 Some parts of this project were developed with the assistance of ChatGPT.
-
----
-
-## About This Repository
-
-This repository contains beginner-to-intermediate level Python projects focused on:
-
-- Practical implementation
-- Clean code structure
-- Real-world use cases
-- Command-line tools
-- File handling and media processing
 
 ---
 
@@ -23,54 +11,53 @@ This repository contains beginner-to-intermediate level Python projects focused 
 
 ## Overview
 
-A Python-based tool that converts video files (MP4, MKV, AVI, etc.) into compressed MP3 audio files using MoviePy.
+A Python-based tool that converts video files (MP4, MKV, AVI, etc.) into compressed MP3 audio files using **Pydub**.
 
 ---
 
 ## Features
 
 - Extracts audio from video  
-- Supports multiple video formats  
-- Adjustable bitrate  
-- Simple and lightweight  
-- Command-line based execution  
+- Creates `Output` folder automatically  
+- Saves MP3 with same filename  
+- Lightweight and console-based  
+- No hardcoded file names  
 
 ---
 
 ## Installation
 
-Install required packages:
+Install required package:
 
 ```bash
-pip install moviepy imageio-ffmpeg
+pip install pydub
 ```
+
+Make sure **FFmpeg** is installed and added to system PATH.
 
 ---
 
 ## How It Works
 
 ```text
-1. Loads the video file
-2. Extracts the audio stream
-3. Converts it into MP3 format
-4. Saves the output file locally
+1. User enters full video file path
+2. Script extracts audio from video
+3. Creates Output folder inside same directory
+4. Saves MP3 using same filename
 ```
 
 ---
 
 ## How To Run
 
-Edit inside the script if needed:
-
-```python
-video_file = "1.mp4"
-output_file = "output.mp3"
+```bash
+python vid2audio.py
 ```
 
-Run the script:
+Enter full video path when prompted:
 
-```bash
-python convert_video_to_audio.py
+```
+E:\videos\videotemp.mp4
 ```
 
 ---
@@ -78,7 +65,76 @@ python convert_video_to_audio.py
 ## Output
 
 ```
-output.mp3
+E:\videos\Output\videotemp.mp3
+```
+
+</details>
+
+---
+
+<details>
+<summary><strong>Subtitle Generator (Click to Expand)</strong></summary>
+
+## Overview
+
+A simple console-based subtitle generator built using the AssemblyAI API.  
+It uploads a video file, transcribes speech, and downloads subtitles in `.srt` format.
+
+---
+
+## Features
+
+- Accepts full video file path  
+- Smart API key handling (auto or prompt)  
+- Chunked upload for stability  
+- Creates `Output` folder automatically  
+- Saves `.srt` with same filename  
+- Clean console-based workflow  
+
+---
+
+## Installation
+
+Install required package:
+
+```bash
+pip install requests
+```
+
+---
+
+## How It Works
+
+```text
+1. User enters API key (if not hardcoded)
+2. User enters video file path
+3. Video is uploaded to AssemblyAI
+4. Transcription is requested
+5. Script waits until completed
+6. Subtitle (.srt) file is downloaded
+7. Saved inside Output folder
+```
+
+---
+
+## How To Run
+
+```bash
+python subtitles.py
+```
+
+Example input:
+
+```
+E:\videos\videotemp.mp4
+```
+
+---
+
+## Output
+
+```
+E:\videos\Output\videotemp.srt
 ```
 
 </details>
@@ -144,15 +200,13 @@ Important: Do not upload real passwords to GitHub.
 
 ## Project Structure
 
-```
+```text
 CHATGPT COURSE/
 │
 ├── Gen/
-│   ├── convert_video_to_audio.py
 │   ├── subtitles.py
-│   ├── 1.mp4
-│   ├── output.mp3
-│   └── subtitles.srt
+│   ├── vid2audio.py
+│   └── Output/
 │
 ├── PasswordManager/
 │   └── password_manager.py
@@ -166,27 +220,12 @@ CHATGPT COURSE/
 ## Skills Demonstrated
 
 - Python file handling  
-- Media processing with MoviePy  
-- Command-line interface development  
+- API integration (AssemblyAI)  
+- Audio processing with Pydub  
+- CLI application development  
 - Project organization  
-- Dependency management  
+- Error handling  
 - Git and GitHub usage  
-
----
-
-## Future Improvements
-
-- GUI version using Tkinter  
-- Encryption for password storage  
-- Batch video conversion  
-- Logging system  
-- Packaging as executable (.exe)  
-
----
-
-## License
-
-This project is licensed under the MIT License.
 
 ---
 
